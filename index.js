@@ -4,6 +4,10 @@ let stopButton = document.querySelector('#stopButton');
 let audio = document.querySelector('#audio');
 let playButton = document.querySelector('#playButton');
 
+window.MediaRecorder = require('./lib/index');
+window.MediaRecorder.encoder = require('./lib/mpeg-encoder');
+window.MediaRecorder.prototype.mimeType = 'audio/mpeg'
+
 recordButton.addEventListener('click', () => {
   // Request permissions to record audio
   navigator.mediaDevices.getUserMedia({ audio: true }).then(stream => {
@@ -15,7 +19,7 @@ recordButton.addEventListener('click', () => {
     })
 
     // Start recording
-    recorder.start()
+    recorder.start();
   })
 })
 

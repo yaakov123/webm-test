@@ -16,5 +16,6 @@
   "bugs": {
     "url": "https://github.com/yaakov123/webm-test/issues"
   },
-  "homepage": "https://github.com/yaakov123/webm-test#readme"
+  "homepage": "https://github.com/yaakov123/webm-test#readme",
+  "dependencies": {}
 }
