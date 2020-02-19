@@ -1,6 +1,8 @@
 let recorder
 let recordButton = document.querySelector('#recordButton');
-let recordButton = document.querySelector('#stopButton');
+let stopButton = document.querySelector('#stopButton');
+let audio = document.querySelector('#audio');
+let playButton = document.querySelector('#playButton');
 
 recordButton.addEventListener('click', () => {
   // Request permissions to record audio
@@ -23,3 +25,8 @@ stopButton.addEventListener('click', () => {
   // Remove “recording” icon from browser tab
   recorder.stream.getTracks().forEach(i => i.stop())
 })
+
+playButton.addEventListener('click', () => {
+  audio.play();
+})
+
